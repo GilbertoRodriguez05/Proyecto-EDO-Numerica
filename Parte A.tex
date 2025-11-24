@@ -1,0 +1,195 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\vspace*{0cm}
+
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+\begin{document}
+\linespread{1.5}
+\setstretch{1.2}
+\section{Demostración de la ecuación diferencial}
+
+Tenemos que $\beta$ es inversamente proporcional a $\sqrt{P}$, igual que $\delta$\\
+$\beta = \frac{b}{\sqrt{P} }\quad  y \quad \delta = \frac{d}{\sqrt{P} }$ \\
+Y que el crecimiento poblacional es proporcional a la población\\
+$\frac{dP}{dt} = mP$\\
+Dicha constante de proporcionalidad será la diferencia de las tasas de\\
+natalidad y mortalidad\\
+$m = \beta - \delta$\\
+Sustituyendo beta y delta\\
+$\frac{dP}{dt} = (\frac{b}{\sqrt{P} } - \frac{d}{\sqrt{P} })P$\\
+$\frac{dP}{dt} = (\frac{b - d}{\sqrt{P} })P$\\
+Digamos que k = b - d\\
+$\frac{dP}{dt} = \frac{kP}{\sqrt{P} }$\\
+Racionalizando queda\\
+$\frac{dP}{dt} = k\sqrt{P}$\\
+$\frac{dP}{\sqrt{P}} = kdt$\\
+Integrando ambos miembros respecto a x\\
+$\int\frac{dP}{\sqrt{P}} = \int kdt$\\
+$2\sqrt{P} = kt + C$\\
+$\sqrt{P} = \frac{kt + C}{2}$\\
+$P = (\frac{kt + C}{2})^2$\\
+$P = (\frac{kt}{2}+\frac{C}{2})^2$\\
+$P(0) = (\frac{k0}{2}+\frac{C}{2})^2$\\
+$P(0) = \frac{C^2}{4}$\\
+$C = 2\sqrt{P(0)}$\\
+Sustituyendo C\\
+$P = (\frac{kt}{2}+\sqrt{P(0)})^2$\\
+Por lo que queda demostrada la ecuación diferencial.\\
+
+\vspace*{15cm}
+\section{Valores iniciales}
+Tenemos que P(0) = 100 y que P(6) = 169.\\
+Entonces P(12) = ¿?\\
+El objetivo es hallar la k que permite que la función pase por esos 3 puntos.\\
+Como P(6) = 169 y P(0) = 100:\\
+$P(6) = (\frac{k6}{2}+\sqrt{P(0)})^2 = 169$\\
+$(3k+\sqrt{100})^2 = 169$\\
+$(3k+10)^2 = 169$\\
+$\sqrt{(3k+10)^2} = \sqrt{169}$\\
+$3k+10 = 13$\\
+$3k = 3$\\
+$k = 1$\\
+Teniendo k, tenemos la ecuación completamente en funcion de t\\
+Evaluando P(12):\\
+$P(12) = (\frac{12}{2}+10)^2$\\
+$P(12) = (16)^2$\\
+$P(12) = 256$\\
+
+
+Dentro de un año (12 meses) habrán 256 peces en el lago.
+
+\section{Campo de isoclinas}
+
+A continuación, se ilustra el campo de isoclinas de la ecuación diferencial\\
+$\frac{dP}{dt} = k\sqrt{P}$ donde se tomó k = 1.\\
+
+Se muestran varias soluciones con diferentes valores de poblacion inicial\\
+Como la pobación de peces aumenta con el paso del tiempo, la tasa de\\
+natalidad es mayor que la de mortalidad, por lo que la constante k \\
+debe ser positiva para que las isoclinas sean crecientes. En la figura\\
+se muestra como la función del ejercicio, con P(0) = 100 y k = 1, cumple\\
+además las otras dos condiciones, P(6) = 169 y P(12) = 256\\
+Para poblaciones pequeñas el cecimiento es demasiado lento, y acelerado \\
+para poblaciones medianas o grandes. Los únicos puntos criticos son P=0, \\
+donde la población se extingue. No hay límite superior en el modelo.\\
+\textbf{Ver Isoclinas.ipynb}
+\begin{figure}[H]
+\includegraphics[scale=0.5]{imagenes/kampliado.png}
+\includegraphics[scale=0.5]{imagenes/k=1.png}
+\centering
+\end{figure}
+
+\vspace*{3cm}
+\section{Planteamiento del Problema}
+Para cada solución particular del problema, o sea, para un k y P(0) específicos,\\
+sabemos que:
+\begin{itemize}
+    \item La función solución $P(t) = (kt/2 + \sqrt{P(0)})^2$ tiene como dominio todas las t $>$ $t_0$, \\
+ya que no tiene límite superior, por lo que para cualquier t habrá una P solución.
+    \item P(t) es inyectiva, como muestra la gráfica, garantizando la unicidad de las\\
+soluciones.
+    \item P(t) es continua y diferenciable, descartando cualquier inestabilidad en las\\
+soluciones
+\end{itemize}
+
+Pero en P = 0 es una zona de puntos criticos, llegar aquí significa la extinción de la\\
+especie y la función se volvería constante en 0 como muestran los isoclinas(P(t)=0),\\
+esto descartaría la unicidad.\\
+
+\textbf{En resumen:} El problema estará bien planteado siempre que ningún factor lleve\\
+a P(t)=0, por ejemplo: k = 0 o P(0) = 0.
+
+\section{Condicionamiento del Problema}
+
+Dado: $\frac{dP}{dt} = \sqrt{P}$, $P(0) = 100$
+Solución: $P(t) = \left(\frac{t}{2} + 10\right)^2$
+
+Para la solución $P(t) = \left(\frac{t}{2} + 10\right)^2$, el número de condición respecto a perturbaciones en $t$ es:
+
+\[
+\text{cond}(P, t) = \left| \frac{t \cdot P'(t)}{P(t)} \right| = \frac{2t}{t + 20}
+\]
+
+\begin{itemize}
+    \item $t = 0$: $\text{cond} = 0$ (insensible)
+    \item $t = 10$: $\text{cond} \approx 0.67$ (buen condicionamiento)
+    \item $t \to \infty$: $\text{cond} \to 2$ (condicionamiento moderado)
+\end{itemize}
+
+\textbf{Interpretación:} Para $t$ grandes, un error del $1\%$ en $t$ produce aproximadamente un $2\%$ de error en $P(t)$.\\
+
+\section{Métodos numéricos y errores}
+En este apartado se emplean dos métodos numericos para el mayor análisis del\\
+problema, y como otras vías de solución. Estos son el método de Euler y el método\\ 
+de Euler Mejorado, también conocido como método de Heun.\\
+\textbf{Ver Euler y Euler Mejorado.ipynb}\\
+\begin{figure}[H]
+\includegraphics[scale=0.7]{imagenes/eulermh2.png}
+\centering
+\end{figure}
+
+Del gráfico comparativo se aprecia como Euler mejorado (línea negra) logra mucha\\
+mayor precisión que el de Euler (línea azul). Euler mejorado es más preciso siendo\\
+de orden 2, calcuando dos pendientes y hallando su promedio en cada iteración, si se\\
+reduce h a la mitad, el error se reduce a la cuarta parte. En cambio, el método de \\
+Euler es de orden 1 y es más sencillo el cálculo de cada iteración, calculando solo \\
+una pendiente, si h se reduce a la mitad, el error también se reduce a la mitad. \\
+Ambos métodos tienen complejidad temporal O(n), donde n es el número de iteraciones\\
+a realizar, aunque Euler mejorado realice más trabajo por iteración.\\
+
+\vspace*{1.25cm}
+
+Ahora, analizaremos los errores absolutos, relativos, hacia adelante y hacia atrás de\\
+estos métodos comparados con la solución exacta.
+
+\begin{itemize}
+    \item Error absoluto: Se calcula como la diferencia entre la solución exacta y \\
+    la aproximada: $\varDelta y = \left\lvert y - \widehat{y} \right\rvert  $\\
+    El error absoluto de las primeras 5 iteraciones de ambos métodos:\\
+    0.000000 0.000000 \\
+    0.062500 0.000762 \\
+    0.126525 0.001525 \\
+    0.192038 0.002288 \\
+    0.259006 0.003052 \\
+
+    \item Error relativo: Es el cociente del error absoluto con la solución exacta:\\
+    $\varDelta y = \left\lvert \frac{y - \widehat{y}}{y} \right\rvert  $\\
+    El error relativo de las primeras 5 iteraciones de ambos métodos:\\
+    0.000000 0.000000 \\
+    0.000595 0.000007 \\
+    0.001148 0.000014 \\
+    0.001662 0.000020 \\
+    0.002141 0.000025 \\
+
+    \item Error hacia adelante: Diferencia entre la solución exacta y la solución aproximada\\
+    perturbada: $\varDelta y = \left\lvert y(x) - \widehat{y}(x + \epsilon) \right\rvert  $\\
+    Ya sabemos que P(12) = 256 con P(0) = 100, veamos con $\epsilon = 0.1$:\\
+    $P_\epsilon (t + \epsilon) = (\frac{t}{2} + \sqrt{100})^2$ \\
+    $P_\epsilon (12.1) = (\frac{12.1}{2} + 10)^2$ \\
+    $P_\epsilon (12.1) = (16.05)^2$ \\
+    $P_\epsilon (12.1) = 257.6025$ \\
+    $\varDelta y = \left\lvert y(P(0)) - \widehat{y}(P(0) + \epsilon) \right\rvert  $\\
+    $\varDelta y = \left\lvert 256 - 257.6025 \right\rvert  $\\
+    $\varDelta y = 1.6025$\\
+    El error de 0.1 mes se amplifica a 1.6 peces después de un año.\\
+
+    \item Error hacia atrás: Dado un resultado aproximado $\widehat{P}$, buscar la perturbación $\epsilon$\\
+    en la entrada tal que: $P(t + \epsilon) = \widehat{P}$\\
+    Tomemos el mismo ejemplo del error hacia adelante\\
+    $P(12 + \epsilon) = 257.6025$\\
+    $P(t) = (\frac{t}{2}+10)^2$\\
+    $t = 2(\sqrt{P(t)} - 10)$\\
+    $12 + \epsilon = 2(\sqrt{257.6025} - 10)$\\
+    $\epsilon = 2(16.05 - 10) - 12$\\
+    $\epsilon = 12.1 - 12$\\
+    $\epsilon = 0.1$\\
+    La perturbación de 0.1 meses es el error hacia atrás para lograr la población de 257.6025.\\
+
+\end{itemize}
+
+\end{document}
