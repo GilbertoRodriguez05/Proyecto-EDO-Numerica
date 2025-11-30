@@ -6,6 +6,7 @@
 \usepackage{fancyhdr}
 \usepackage{lipsum}
 \usepackage[spanish,es-tabla]{babel}
+\usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
@@ -19,8 +20,16 @@
 
 \usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
 \begin{document}
+\begin{center}
+{\LARGE \textbf{Proyecto EDO-Num}} \\
+\vspace{0.5cm}
+{\Large Tema 9: Modelos de población}
+\end{center}
+
 \linespread{1.5}
 \setstretch{1.2}
+\section*{Introducción}
+    Este trabajo integra técnicas analíticas y geométricas de las ecuaciones diferenciales para explorar la dinámica de sistemas poblacionales. Se abordan tres escenarios fundamentales: un modelo de crecimiento no lineal, un modelo con bifurcación y un sistema de dos especies en interacción, destacando la versatilidad de la modelación matemática en ecología.
 \section{Parte A}
 \subsection{Demostración de la ecuación diferencial}
 
@@ -46,13 +55,13 @@ $\sqrt{P} = \frac{kt + C}{2}$\\
 $P = (\frac{kt + C}{2})^2$\\
 $P = (\frac{kt}{2}+\frac{C}{2})^2$\\
 $P(0) = (\frac{k0}{2}+\frac{C}{2})^2$\\
+\vspace{15cm}
 $P(0) = \frac{C^2}{4}$\\
 $C = 2\sqrt{P(0)}$\\
 Sustituyendo C\\
 $P = (\frac{kt}{2}+\sqrt{P(0)})^2$\\
 Por lo que queda demostrada la ecuación diferencial.\\
 
-\vspace{15cm}
 \subsection{Valores iniciales}
 Tenemos que P(0) = 100 y que P(6) = 169.\\
 Entonces P(12) = ¿?\\
@@ -260,19 +269,16 @@ El diagrama de bifurcación en el plano \((\mu, z)\) muestra una \textbf{bifurca
     grid style = {dashed, gray!30}
 ]
 
-% Rama estable z = 0 para mu < 0
 \addplot[thick, blue, domain=-5:0] {0};
-% Rama inestable z = 0 para mu > 0
+
 \addplot[thick, blue, dashed, domain=0:5] {0};
-% Rama estable z = mu para mu > 0
+
 \addplot[thick, red, domain=0:5] {x};
-% Rama inestable z = mu para mu < 0
+
 \addplot[thick, red, dashed, domain=-5:0] {x};
 
-% Punto de bifurcación
 \node[circle, fill=black, inner sep=2pt] at (axis cs:0,0) {};
 
-% Etiquetas
 \node[blue, right] at (axis cs:-3,0.5) {$z=0$ (estable)};
 \node[blue, right] at (axis cs:1.5,0.5) {$z=0$ (inestable)};
 \node[red, right] at (axis cs:2,2.5) {$z=\mu$ (estable)};
@@ -329,4 +335,120 @@ El diagrama de bifurcación confirma:
 \item Cambio de estabilidad en los puntos fijos
 \item Comportamiento cualitativamente diferente para \(\mu < 0\) y \(\mu > 0\)
 \end{itemize}
+
+\section{Parte C}
+\subsection{ Puntos Críticos y Clasificación}
+
+El sistema de ecuaciones diferenciales lineales es:
+
+\[
+\begin{cases} 
+\dfrac{dx}{dt} = 0.1x - 0.05y, \\
+\dfrac{dy}{dt} = 0.05x - 0.1y.
+\end{cases}
+\]
+
+\textbf{Puntos críticos:} Se obtienen cuando $\dfrac{dx}{dt} = 0$ y $\dfrac{dy}{dt} = 0$:
+
+\[
+\begin{aligned}
+0.1x - 0.05y &= 0 \\
+0.05x - 0.1y &= 0
+\end{aligned}
+\]
+
+Resolviendo el sistema, se encuentra que el único punto crítico es $(0, 0)$.
+
+\textbf{Clasificación:} Para clasificar el punto crítico, se analiza la matriz Jacobiana del sistema:
+
+\[
+A = \begin{bmatrix}
+0.1 & -0.05 \\
+0.05 & -0.1
+\end{bmatrix}
+\]
+
+Los valores propios de $A$ se obtienen de la ecuación característica $\det(A - \lambda I) = 0$:
+
+\[
+\det \begin{bmatrix}
+0.1 - \lambda & -0.05 \\
+0.05 & -0.1 - \lambda
+\end{bmatrix} = (0.1 - \lambda)(-0.1 - \lambda) - (-0.05)(0.05) = \lambda^2 - 0.0075 = 0
+\]
+
+Por lo tanto, $\lambda = \pm \sqrt{0.0075} = \pm \dfrac{\sqrt{3}}{20} \approx \pm 0.0866$. 
+
+Como los valores propios son reales y de signos opuestos, el punto crítico $(0, 0)$ es un \textbf{punto silla} (inestable).
+
+\subsection{Plano de Fase}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.8\textwidth,
+    height=0.6\textwidth,
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = {$y$},
+    xmin = -1.5, xmax = 1.5,
+    ymin = -1.5, ymax = 1.5,
+    grid = major,
+    grid style = {dashed, gray!30},
+    title = {Plano de Fase - Punto Silla}
+]
+
+
+\addplot[red, dashed, domain=-1.5:1.5] {0.268*x};
+\addplot[blue, dashed, domain=-1.5:1.5] {3.732*x};
+
+\foreach \x in {-1.2,-0.8,-0.4,0,0.4,0.8,1.2}
+    \foreach \y in {-1.2,-0.8,-0.4,0,0.4,0.8,1.2}
+        {
+            \pgfmathsetmacro{\dx}{0.1*\x - 0.05*\y}
+            \pgfmathsetmacro{\dy}{0.05*\x - 0.1*\y}
+            \pgfmathsetmacro{\len}{sqrt(\dx*\dx + \dy*\dy)}
+            \edef\temp{
+                \noexpand\addplot[gray, ->, thin] coordinates {(\x,\y) (\x+0.2*\dx/\len,\y+0.2*\dy/\len)};
+            }
+            \temp
+        }
+
+\node[circle, fill=black, inner sep=2pt, label=above right:{$(0,0)$}] at (axis cs:0,0) {};
+
+\addplot[domain=-1.5:1.5, samples=50, thick, green!70!black] {0.268*x + 0.1*exp(0.0866*x)};
+\addplot[domain=-1.5:1.5, samples=50, thick, green!70!black] {0.268*x - 0.1*exp(0.0866*x)};
+\addplot[domain=-0.5:0.5, samples=50, thick, orange!70!black] {3.732*x + 0.05*exp(-0.0866*x)};
+\addplot[domain=-0.5:0.5, samples=50, thick, orange!70!black] {3.732*x - 0.05*exp(-0.0866*x)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Diagrama de fase mostrando el punto silla en $(0,0)$. Las flechas rojas indican la dirección inestable y las azules la dirección estable.}
+\end{figure}
+\subsection{Verificación del Problema Bien Planteado}
+
+\begin{itemize}
+    \item \textbf{Existencia y unicidad:} El sistema es lineal con coeficientes constantes, por lo que las funciones son continuas. Así, para cualquier condición inicial, existe una solución única definida para todo $t \in \mathbb{R}$.
+    
+    \item \textbf{Estabilidad de las soluciones:} El punto crítico es inestable (punto silla). Pequeñas perturbaciones en las condiciones iniciales en la dirección inestable llevan a soluciones que se alejan exponencialmente del origen. Por lo tanto, el sistema no es estable. Sin embargo, el problema está bien planteado en términos de existencia y unicidad.
+\end{itemize}
+
+\subsection{Interpretación Física}
+
+En el contexto de poblaciones acopladas:
+
+\begin{itemize}
+\item El sistema modela la interacción débil entre dos especies $x$ e $y$
+\item El punto silla en $(0,0)$ indica que el equilibrio es inestable
+\item Dependiendo de las condiciones iniciales:
+  \begin{itemize}
+  \item Una especie puede crecer mientras la otra decrece
+  \item Ambas pueden extinguirse si están en la variedad estable
+  \end{itemize}
+\item La ausencia de coexistencia estable sugiere competencia entre especies
+\item El resultado final es sensible a las poblaciones iniciales
+\item La inestabilidad implica que, en la práctica, cualquier perturbación pequeña (como un cambio leve en las poblaciones iniciales) llevará a que una especie domine y la otra decline, en lugar de mantenerse cerca del equilibrio. Esto es típico en sistemas competitivos o con interacciones que no favorecen la coexistencia estable.
+\end{itemize}
+
 \end{document}

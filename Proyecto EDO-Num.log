@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.23)  29 NOV 2025 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.23)  29 NOV 2025 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./Parte A.tex"
-(Parte A.tex
+**"./Proyecto EDO-Num.tex"
+(Proyecto EDO-Num.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
 (D:\apps\LaTeX\tex/latex/base\article.cls
@@ -735,32 +735,32 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen292
 \Gm@dimlist=\toks48
 
-(D:\apps\LaTeX\tex/latex/geometry\geometry.cfg)) (Parte A.aux
+(D:\apps\LaTeX\tex/latex/geometry\geometry.cfg)) (Proyecto EDO-Num.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 11.
 )
-\openout1 = `"Parte A.aux"'.
+\openout1 = `"Proyecto EDO-Num.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 (D:\apps\LaTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -783,12 +783,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (D:\apps\LaTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \. on input line 21.
-LaTeX Info: Redefining \% on input line 21.
-Package hyperref Info: Link coloring OFF on input line 21.
- (Parte A.out) (Parte A.out)
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
+Package hyperref Info: Link coloring OFF on input line 22.
+ (Proyecto EDO-Num.out)
+(Proyecto EDO-Num.out)
 \@outlinefile=\write4
-\openout4 = `"Parte A.out"'.
+\openout4 = `"Proyecto EDO-Num.out"'.
 
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
@@ -828,89 +829,93 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
 
 (D:\apps\LaTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
 
 
 (D:\apps\LaTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 27--54
+Underfull \hbox (badness 10000) in paragraph at lines 36--64
 
  []
+
+
+Overfull \vbox (65.72078pt too high) has occurred while \output is active []
+
 
 [1
 
 {C:/Users/rened/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 57--73
+Underfull \hbox (badness 10000) in paragraph at lines 66--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
-<imagenes/kampliado.png, id=72, 732.8178pt x 516.0078pt>
+<imagenes/kampliado.png, id=94, 732.8178pt x 516.0078pt>
 File: imagenes/kampliado.png Graphic file (type png)
 <use imagenes/kampliado.png>
-Package pdftex.def Info: imagenes/kampliado.png  used on input line 93.
+Package pdftex.def Info: imagenes/kampliado.png  used on input line 102.
 (pdftex.def)             Requested size: 366.408pt x 258.00327pt.
-<imagenes/k=1.png, id=74, 735.7086pt x 516.0078pt>
+<imagenes/k=1.png, id=96, 735.7086pt x 516.0078pt>
 File: imagenes/k=1.png Graphic file (type png)
 <use imagenes/k=1.png>
-Package pdftex.def Info: imagenes/k=1.png  used on input line 94.
+Package pdftex.def Info: imagenes/k=1.png  used on input line 103.
 (pdftex.def)             Requested size: 367.8534pt x 258.00327pt.
-[2] [3 <./imagenes/kampliado.png> <./imagenes/k=1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 111--114
+[2] [3] [4 <./imagenes/kampliado.png> <./imagenes/k=1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
-<imagenes/eulermh2.png, id=85, 614.295pt x 404.712pt>
+<imagenes/eulermh2.png, id=111, 614.295pt x 404.712pt>
 File: imagenes/eulermh2.png Graphic file (type png)
 <use imagenes/eulermh2.png>
-Package pdftex.def Info: imagenes/eulermh2.png  used on input line 143.
+Package pdftex.def Info: imagenes/eulermh2.png  used on input line 152.
 (pdftex.def)             Requested size: 430.00356pt x 283.29646pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--145
+Underfull \hbox (badness 10000) in paragraph at lines 147--154
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 147--155
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 156--164
 
  []
 
-[5 <./imagenes/eulermh2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 162--170
-
- []
-
-
+[6 <./imagenes/eulermh2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 171--179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--191
+Underfull \hbox (badness 10000) in paragraph at lines 180--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--203
+Underfull \hbox (badness 10000) in paragraph at lines 189--200
 
  []
 
-[6] [7] [8] [9] (Parte A.aux
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--212
+
+ []
+
+[7] [8] [9] [10] [11] [12] (Proyecto EDO-Num.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -918,29 +923,37 @@ LaTeX Info: Redefining \% on input line 11.
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
-Package rerunfilecheck Info: File `"Parte A".out' has not changed.
-(rerunfilecheck)             Checksum: 5CFAE9BE037AF74F5F43B0B936AB905A;2557.
+
+
+Package rerunfilecheck Warning: File `"Proyecto EDO-Num".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Proyecto EDO-Num".out':
+(rerunfilecheck)             Before: 77BD849C2AD1F1FE3C908D6513ACAA3B;3444
+(rerunfilecheck)             After:  15560D2B01781504EEB8D3C3BE713956;3449.
  ) 
 Here is how much of TeX's memory you used:
- 33398 strings out of 467871
- 767641 string characters out of 5433286
- 1422456 words of memory out of 5000000
- 61749 multiletter control sequences out of 15000+600000
- 634221 words of font info for 64 fonts, out of 8000000 for 9000
+ 33664 strings out of 467871
+ 773079 string characters out of 5433286
+ 1551588 words of memory out of 5000000
+ 62005 multiletter control sequences out of 15000+600000
+ 634827 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,94p,720b,2117s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,94p,729b,2243s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\rened\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><D:/apps/LaTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/apps/LaTeX
 /fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/apps/LaTeX/fonts/type1/public/am
 sfonts/cmextra/cmex8.pfb><D:/apps/LaTeX/fonts/type1/public/amsfonts/cm/cmmi12.p
 fb><D:/apps/LaTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/apps/LaTeX/fonts
 /type1/public/amsfonts/cm/cmr12.pfb><D:/apps/LaTeX/fonts/type1/public/amsfonts/
-cm/cmr6.pfb><D:/apps/LaTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/apps/LaT
-eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/apps/LaTeX/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb>
-Output written on "Parte A.pdf" (9 pages, 471664 bytes).
+cm/cmr17.pfb><D:/apps/LaTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/apps/La
+TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/apps/LaTeX/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb><D:/apps/LaTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+D:/apps/LaTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Proyecto EDO-Num.pdf" (12 pages, 503903 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 132 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
+ 172 words of extra memory for PDF output out of 10000 (max. 10000000)
 
